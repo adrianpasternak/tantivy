@@ -4,8 +4,8 @@ use crate::fieldnorm::FieldNormReader;
 use crate::query::Explanation;
 use crate::{Score, Searcher, Term};
 
-const K1: Score = 1.2;
-const B: Score = 0.75;
+const K1: Score = 2.5;
+const B: Score = 0.4;
 
 pub(crate) fn idf(doc_freq: u64, doc_count: u64) -> Score {
     assert!(doc_count >= doc_freq, "{} >= {}", doc_count, doc_freq);
